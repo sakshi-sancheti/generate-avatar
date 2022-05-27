@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<section>
+	<h1>WHICH AVATAR WOULD YOUR NAME GET FOR YOU?</h1>
+	<div class="centrediv">
+		<div class="details">
+			<label>ENTER YOUR NAME</label>
+			<br>
+			<input type="text" name="" id="nameid">
+		</div>
+
+		<div class="imagediv">
+			<img src="image.png" width="200" height="200" class="imgid">
+		</div>
+
+		<button>CLICK ME</button>
+	</div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+ $(document).ready(function(){
+  $('button').click(function(){
+   const name = $('#nameid').val();
+   alert(name);
+
+   $('.imgid').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+
+  });
+ });
+</script>
+</body>
+</html>
